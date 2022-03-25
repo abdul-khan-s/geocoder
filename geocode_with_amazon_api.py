@@ -10,8 +10,7 @@ client = boto3.client('location') # Calls AWS Location component
 for i in addr_list:
 	Response = client.search_place_index_for_text(
 		IndexName = 'geocoding_test4',  # This is the AWS Location service name that was created to use HERE.COM
-	###index is created using Amazon Location service
-		Text = i ) #
+		Text = i ) 
 
 
 	Lat_Long = Response['Results'][0]['Place']['Geometry']['Point']  # get lat long
